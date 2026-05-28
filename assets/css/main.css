@@ -227,3 +227,29 @@ canvas {
 @keyframes spin { to { transform: rotate(360deg); } }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+/* Nuxt shell layout */
+.app-shell {
+  min-height: 100dvh;
+  position: relative;
+}
+
+.particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particles .particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(92,124,250,.35) 0%, transparent 70%);
+  animation: floatUp linear infinite;
+  will-change: transform, opacity;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+}
